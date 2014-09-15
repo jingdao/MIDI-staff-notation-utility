@@ -1,0 +1,16 @@
+CFLAGS =  @USE_SQLITE3@
+LDFLAGS = @LIBSQLITE3@ 
+CC = @CC@
+all: mid2stf stf2mid
+
+debug: CFLAGS+= -ggdb
+debug: all
+
+mid2stf: mid2stf.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+stf2mid: stf2mid.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	
+clean:
+	rm -f mid2asc asc2mid mid2stf stf2mid
