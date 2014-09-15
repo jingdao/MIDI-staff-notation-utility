@@ -1,7 +1,7 @@
 MIDI-staff-notation-utility
 ==========================
 
-Parses a MUsical Instrument Digital Interface (MIDI) file
+Parses a Musical Instrument Digital Interface (MIDI) file
 and converts it into text representation similiar to 
 staff notation.
 
@@ -9,10 +9,15 @@ Notation
 --------
 
 `Bb2`: represents notes. e.g. B-flat on the second octave (middle C is C4)
+
 `.`: represents rest
+
 `-`: represents held note
+
 `|`: represents bar line
+
 `()`: represents block chords (notes played simultaneously)
+
 ` `: each time division (quarter note for 4/4 time) is separated by a space
 
 
@@ -38,3 +43,7 @@ Example output
 	|                    |. . . .                 |Eb4      Eb-Eb  Eb     Eb-Eb  |Eb Eb-Eb Eb  Eb-Eb   |
 	|Drums               |                        |mp                            |                     |
 
+References
+----------
+
+http://www.archduke.org/midi/index.html
